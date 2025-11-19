@@ -203,13 +203,34 @@ const CalendarDisplay = () => {
                 </div>
             </div>
             {/* Days of the week cells */}
-            <div id='Sunday' className='weekday-cell'><p>Sunday</p></div>
-            <div id='Monday' className='weekday-cell'>Monday</div>
-            <div id='Tuesday' className='weekday-cell'>Tuesday</div>
-            <div id='Wednesday' className='weekday-cell'>Wednesday</div>
-            <div id='Thursday' className='weekday-cell'>Thursday</div>
-            <div id='Friday' className='weekday-cell'>Friday</div>
-            <div id='Saturday' className='weekday-cell'>Saturday</div>
+            <div id='Sunday' className='weekday-cell'>
+                <p className='long-day-name'>Sunday</p>
+                <p className='short-day-name'>Sun</p>
+            </div>
+            <div id='Monday' className='weekday-cell'>
+                <p className='long-day-name'>Monday</p>
+                <p className='short-day-name'>Mon</p>
+            </div>
+            <div id='Tuesday' className='weekday-cell'>
+                <p className='long-day-name'>Tuesday</p>
+                <p className='short-day-name'>Tue</p>
+            </div>
+            <div id='Wednesday' className='weekday-cell'>
+                <p className='long-day-name'>Wednesday</p>
+                <p className='short-day-name'>Wed</p>
+            </div>
+            <div id='Thursday' className='weekday-cell'>
+                <p className='long-day-name'>Thursday</p>
+                <p className='short-day-name'>Thu</p>
+            </div>
+            <div id='Friday' className='weekday-cell'>
+                <p className='long-day-name'>Friday</p>
+                <p className='short-day-name'>Fri</p>
+            </div>
+            <div id='Saturday' className='weekday-cell'>
+                <p className='long-day-name'>Saturday</p>
+                <p className='short-day-name'>Sat</p>
+            </div>
             {/* Date cells */}
             <div id='0' className='cell'></div>
             <div id='1' className='cell'></div>

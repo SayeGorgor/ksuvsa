@@ -27,6 +27,14 @@
     background-color: white;
 }
 
+.weekday-cell p {
+    margin: 0;
+}
+
+.weekday-cell p.short-day-name {
+    display: none;
+}
+
 #Sunday,
 [id="0"],
 [id="7"],
@@ -234,10 +242,11 @@
         overflow: hidden;
     }
 
-    .weekday-cell p {
-        width: 1px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    .weekday-cell p.long-day-name {
+        display: none;
+    }
+
+    .weekday-cell p.short-day-name {
+        display: inline;
     }
 }

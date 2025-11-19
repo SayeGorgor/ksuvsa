@@ -142,6 +142,7 @@
     font-size: clamp(.5rem, 1vw + 1rem, 1.5rem);
     line-height: 1.5;
     max-width: 30em;
+    text-align: center;
 }
 
 .view-gallery-button {
@@ -152,6 +153,7 @@
     font-size: 1em;
     font-weight: bolder;
     background-color: rgb(229, 213, 149);
+    color: black;
     border: none;
     border-radius: 2em;
     transition: background-color .25s ease;
