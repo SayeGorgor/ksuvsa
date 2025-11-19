@@ -117,7 +117,7 @@ const EboardPage = () => {
             <div id='top-row'>
                 <h1>Welcome, Eboard!</h1>
                 <div id='eboard-page-logo-container' onClick={handleIconClick}>
-                    <img id='eboard-page-logo' src='../../public/photos/ksuvsa_logo.png' />
+                    <img id='eboard-page-logo' src='/photos/ksuvsa_logo.png' />
                 </div>
             </div>
             <div id='update-upcoming-events-section'>
@@ -153,7 +153,7 @@ const EboardPage = () => {
                     <li>
                         <div className='contact-link important-link-card' onClick={handleLinkClick}>
                             <div className='update-important-link-img-container'>
-                                <img id='volunteer-img' src='../../public/photos/culture_show/carousel_10.jpg' />
+                                <img id='volunteer-img' src='/photos/culture_show/carousel_10.jpg' />
                             </div>
                             <p>Volunteer Interest Form</p>
                         </div>
@@ -161,7 +161,7 @@ const EboardPage = () => {
                     <li>
                         <div id='dance-link' className='contact-link important-link-card' onClick={handleLinkClick}>
                             <div className='update-important-link-img-container'>
-                                <img id='dance-img' src='../../public/photos/join_us_background.jpg' />
+                                <img id='dance-img' src='/photos/join_us_background.jpg' />
                             </div>
                             <p>Modern & Fan Dance Form</p>
                         </div>
@@ -169,7 +169,7 @@ const EboardPage = () => {
                     <li>
                         <div id='fashion-show-link' className='contact-link important-link-card' onClick={handleLinkClick}>
                             <div className='update-important-link-img-container'>
-                                <img id='fashion-show-img' src='../../public/photos/contact_page/fashion_show.jpg' />
+                                <img id='fashion-show-img' src='/photos/contact_page/fashion_show.jpg' />
                             </div>
                             <p>Fashion Show Interest Form</p>
                         </div>
@@ -177,7 +177,7 @@ const EboardPage = () => {
                     <li>
                         <div id='individual-act-link' className='contact-link important-link-card' onClick={handleLinkClick}>
                             <div className='update-important-link-img-container'>
-                                <img id='individual-act-img' src='../../public/photos/contact_page/individual_act.jpg' />
+                                <img id='individual-act-img' src='/photos/contact_page/individual_act.jpg' />
                             </div>
                             <p>Individual Act Interest Form</p>
                         </div>
@@ -185,7 +185,7 @@ const EboardPage = () => {
                     <li>
                         <div id='acting-link' className='contact-link important-link-card' onClick={handleLinkClick}>
                             <div className='update-important-link-img-container'>
-                                <img id='acting-img' src='../../public/photos/contact_page/acting.jpg' />
+                                <img id='acting-img' src='/photos/contact_page/acting.jpg' />
                             </div>
                             <p>Acting Interest Form</p>
                         </div>
@@ -193,7 +193,7 @@ const EboardPage = () => {
                     <li>
                         <div id='emcee-link' className='contact-link important-link-card' onClick={handleLinkClick}>
                             <div className='update-important-link-img-container'>
-                                <img id='emcee-img' src='../../public/photos/contact_page/emcee.jpg' />
+                                <img id='emcee-img' src='/photos/contact_page/emcee.jpg' />
                             </div>
                             <p>EMCEE Interest Form</p>
                         </div>

@@ -62,7 +62,7 @@ const NavBar = () => {
                     </li>
                 </ul>
                 <div id='logo-container' onClick={(e) => handleLogoClick(e)}>
-                    <img id='logo' src='../../public/photos/ksuvsa_logo.png' alt='KSUVSA Logo' />
+                    <img id='logo' src='/photos/ksuvsa_logo.png' alt='KSUVSA Logo' />
                 </div>
                 <ul id='nav-links-right' className='nav-links'>
                     <li>

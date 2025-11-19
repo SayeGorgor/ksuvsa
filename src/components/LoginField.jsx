@@ -67,7 +67,7 @@ const LoginField = () => {
         <div id='login-page-container' className={showLoginField ? 'visible' : ''}>
             <div id='login-form-container'>
                 <CloseWindowIcon id='close-window-icon' onClick={handleCloseWindowClick} />
-                <img src='../../public/photos/ksuvsa_logo.png' alt='KSUVSA Logo' id='login-logo' />
+                <img src='/photos/ksuvsa_logo.png' alt='KSUVSA Logo' id='login-logo' />
                 <h1>Eboard Log In</h1>
                 <form id='login-form'>
                     <label>

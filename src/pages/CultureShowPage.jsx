@@ -102,14 +102,14 @@ const CultureShowPage = () => {
     return(
         <div id='cs-page-body'>
             <div id='cs-page-hero-section'>
-                <img id='cs-page-hero-img' src='../../public/photos/culture_show_hero_2.jpg' />
+                <img id='cs-page-hero-img' src='/photos/culture_show_hero_2.jpg' />
                 <h3 id='present-text'>KSUVSA Presents...</h3>
                 <h2 id='annual-text'>THE ANNUAL</h2>
                 <h2 id='main-text'>CULTURE SHOW</h2>
             </div>
             <div id='cs-page-abt-section'>
                 <div id='cs-page-abt-img-container'>
-                    <img id='cs-page-abt-img' src='../../public/photos/culture_show_abt_3.jpg' />
+                    <img id='cs-page-abt-img' src='/photos/culture_show_abt_3.jpg' />
                 </div>
                 <div id='cs-page-abt-text'>
                     <h2>About Our Show</h2>
@@ -246,7 +246,7 @@ const CultureShowPage = () => {
                     </div>
                 </div>
                 <div id='join-us-img-container'>
-                    <img id='join-us-img' src='../../public/photos/join_us_background.jpg' />
+                    <img id='join-us-img' src='/photos/join_us_background.jpg' />
                 </div>
             </div>
         </div>

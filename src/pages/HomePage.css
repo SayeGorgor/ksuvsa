@@ -189,7 +189,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('./public/photos/gisel.jpg');
+    background-image: url('/photos/gisel.jpg');
     background-size: 100%;
     background-position: center;
     filter: blur(0);
@@ -207,7 +207,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('./public/photos/jenny.jpg');
+    background-image: url('/photos/jenny.jpg');
     background-size: 120%;
     background-position: center;
     filter: blur(0);
@@ -224,7 +224,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('./public/photos/hoang.jpg');
+    background-image: url('/photos/hoang.jpg');
     background-size: 100%;
     filter: blur(0);
     z-index: -1;
@@ -240,7 +240,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('./public/photos/cierra.jpg');
+    background-image: url('/photos/cierra.jpg');
     background-size: 100%;
     filter: blur(0);
     z-index: -1;
@@ -256,7 +256,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('./public/photos/joy.jpg');
+    background-image: url('/photos/joy.jpg');
     background-size: 100%;
     filter: blur(0);
     z-index: -1;
@@ -272,7 +272,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('./public/photos/mechelle.jpg');
+    background-image: url('/photos/mechelle.jpg');
     background-size: 100%;
     filter: blur(0);
     z-index: -1;
@@ -288,7 +288,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('./public/photos/shannon.jpg');
+    background-image: url('/photos/shannon.jpg');
     background-size: 110%;
     background-position: center;
     filter: blur(0);
@@ -305,7 +305,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('./public/photos/tiffany.jpg');
+    background-image: url('/photos/tiffany.jpg');
     background-size: 100%;
     filter: blur(0);
     z-index: -1;
@@ -325,7 +325,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('./public/photos/chloe.jpg');
+    background-image: url('/photos/chloe.jpg');
     background-size: 100%;
     background-position: center;
     filter: blur(0);

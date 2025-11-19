@@ -5,7 +5,7 @@ const EventsPage = () => {
     return(
         <div id='events-page-container'>
             <div id='events-page-hero-container'>
-                <img id='events-page-hero-img' src='../../public/photos/events_page/event_page_hero.jpg' />
+                <img id='events-page-hero-img' src='/photos/events_page/event_page_hero.jpg' />
                 <h1>Our Events</h1>
             </div>
             <div id='main-title-container'>
@@ -13,7 +13,7 @@ const EventsPage = () => {
             </div>
             <div id='gbm-section' className='section'>
                 <div id='gbm-img-container' className='section-img-container'>
-                    <img src='../../public/photos/events_page/gbm.jpg' />
+                    <img src='/photos/events_page/gbm.jpg' />
                 </div>
                 <div id='gbm-text' className='section-text'>
                     <h3>General Body Meetings</h3>
@@ -38,12 +38,12 @@ const EventsPage = () => {
                     </p>
                 </div>
                 <div id='fundraiser-img-container' className='section-img-container'>
-                    <img src='../../public/photos/events_page/fundraiser.jpg' />
+                    <img src='/photos/events_page/fundraiser.jpg' />
                 </div>
             </div>
             <div id='social-section' className='section'>
                 <div id='social-img-container' className='section-img-container'>
-                    <img src='../../public/photos/events_page/social.jpg' />
+                    <img src='/photos/events_page/social.jpg' />
                 </div>
                 <div id='social-text' className='section-text'>
                     <h3>Socials</h3>

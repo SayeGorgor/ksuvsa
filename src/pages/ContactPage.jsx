@@ -52,7 +52,7 @@ const Contact = () => {
                         <div id='unavsa-link' className='contact-link external-contact-link'>
                             <a href='https://www.instagram.com/unavsa/' target='_blank'></a>
                             <div className='external-link-img-container'>
-                                <img src='../../public/photos/contact_page/unavsa_logo.png' />
+                                <img src='/photos/contact_page/unavsa_logo.png' />
                             </div>
                             <div className='external-link-text'>
                                 <h4>UNAVSA</h4>
@@ -61,7 +61,7 @@ const Contact = () => {
                         <div id='uvsase-link' className='contact-link external-contact-link'>
                             <a href='https://www.instagram.com/uvsase/' target='_blank'></a>
                             <div className='external-link-img-container'>
-                                <img src='../../public/photos/contact_page/uvsase_logo.png' />
+                                <img src='/photos/contact_page/uvsase_logo.png' />
                             </div>
                             <div className='external-link-text'>
                                 <h4>UVSASE</h4>
@@ -77,7 +77,7 @@ const Contact = () => {
                                 <a href='https://docs.google.com/forms/d/e/1FAIpQLSe39QU2ahwat0I5CHY47vuFgJGI2KG2oXNQv8OYwPMXP8w6bQ/viewform?usp=header' 
                                    target='_blank'></a>
                                 <div className='important-link-img-container'>
-                                    <img id='volunteer-img' src='../../public/photos/culture_show/carousel_10.jpg' />
+                                    <img id='volunteer-img' src='/photos/culture_show/carousel_10.jpg' />
                                 </div>
                                 <p>Volunteer Interest Form</p>
                             </div>
@@ -87,7 +87,7 @@ const Contact = () => {
                                 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeuCTagP83ZVr9oBELIY2CeiAusUSnQezShpIBJuQDuATZCdw/closedform' 
                                    target='_blank'></a>
                                 <div className='important-link-img-container'>
-                                    <img id='dance-img' src='../../public/photos/join_us_background.jpg' />
+                                    <img id='dance-img' src='/photos/join_us_background.jpg' />
                                 </div>
                                 <p>Modern & Fan Dance Form</p>
                             </div>
@@ -97,7 +97,7 @@ const Contact = () => {
                                 <a href='https://docs.google.com/forms/d/e/1FAIpQLSeZ0r0KLN8AJWuF_Cpk8dbjC0HNUcCEX0GnJKmhpHdZQ9GQTA/viewform' 
                                    target='_blank'></a>
                                 <div className='important-link-img-container'>
-                                    <img id='fashion-show-img' src='../../public/photos/contact_page/fashion_show.jpg' />
+                                    <img id='fashion-show-img' src='/photos/contact_page/fashion_show.jpg' />
                                 </div>
                                 <p>Fashion Show Interest Form</p>
                             </div>
@@ -107,7 +107,7 @@ const Contact = () => {
                                 <a href='https://docs.google.com/forms/d/e/1FAIpQLScQyVY2ZhWpfxcAcHaMIQEoyNbqiMVo8clBiHFw63Kk-4ngNg/viewform' 
                                    target='_blank'></a>
                                 <div className='important-link-img-container'>
-                                    <img id='individual-act-img' src='../../public/photos/contact_page/individual_act.jpg' />
+                                    <img id='individual-act-img' src='/photos/contact_page/individual_act.jpg' />
                                 </div>
                                 <p>Individual Act Interest Form</p>
                             </div>
@@ -117,7 +117,7 @@ const Contact = () => {
                                 <a href='https://docs.google.com/forms/d/e/1FAIpQLSdLX86wAZUIAVesZ4dfDVqtDfQDGpSXzB3QlkxuABFZNNZoyg/viewform' 
                                    target='_blank'></a>
                                 <div className='important-link-img-container'>
-                                    <img id='acting-img' src='../../public/photos/contact_page/acting.jpg' />
+                                    <img id='acting-img' src='/photos/contact_page/acting.jpg' />
                                 </div>
                                 <p>Acting Interest Form</p>
                             </div>
@@ -127,7 +127,7 @@ const Contact = () => {
                                 <a href='https://docs.google.com/forms/d/e/1FAIpQLSdy22SoLmLTn70lpd48YEOtGUfFNumGiYAc6RnJM85bax-34w/viewform?usp=header' 
                                    target='_blank'></a>
                                 <div className='important-link-img-container'>
-                                    <img id='emcee-img' src='../../public/photos/contact_page/emcee.jpg' />
+                                    <img id='emcee-img' src='/photos/contact_page/emcee.jpg' />
                                 </div>
                                 <p>EMCEE Interest Form</p>
                             </div>

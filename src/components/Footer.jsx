@@ -11,7 +11,7 @@ const Footer = () => {
         <footer id='footer-body'>
             <div id='description-section'>
                 <div id='footer-logo-container'>
-                    <img id='footer-logo' src='../../public/photos/ksuvsa_logo.png' alt='KSUVSA Logo' />
+                    <img id='footer-logo' src='/photos/ksuvsa_logo.png' alt='KSUVSA Logo' />
                 </div>
                 <h5>KSUVSA</h5>
                 <p>
