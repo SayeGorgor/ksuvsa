@@ -9,5 +9,5 @@ export default defineConfig({
         icon: true,
       },
     })],
-  base: process.env.VITE_BASE_PATH || '/ksuvsa',
+  base: process.env.VITE_BASE_PATH
 })
