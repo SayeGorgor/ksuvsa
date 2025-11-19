@@ -46,11 +46,11 @@ const Home = () => {
                         CREATING COMMUNITY<br />CULTIVATING CULTURE<br />BUILDING FRIENDSHIPS
                     </h6>
                 </div>
-                <img src='/photos/home_hero_background.jpg' />
+                <img src='/photos/home_hero_background.jpg' alt='KSUVSA Members Posing' />
             </div>
             <div id='goal-section'>
                 <div className='goal-section-img-container'>
-                    <img src='/photos/home_img_1.jpeg' />
+                    <img src='/photos/home_img_1.jpeg' alt='KSUVSA Members at Field Day' />
                 </div>
                 <div id='goal-section-text'>
                     <h2>Our Goal</h2>
