@@ -1,0 +1,22 @@
+/* html {
+    scrollbar-gutter: stable;
+} */
+
+body {
+    margin: 0;
+    /* background-color: rgb(255, 255, 157); */
+    /* background-color: rgb(255, 247, 141); */
+    background-color: rgb(229, 213, 149);
+}
+
+#app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 46dvh;
+}
+
+@media(max-width:500px) {
+    #app-container {
+        min-height: 73.2dvh;
+    }
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ANIMATIONS */
+@keyframes openSideBar {
+    from{transform: translateX(100%); opacity: 0;}
+    to{transform: translateX(0); opacity: 1;}
+}
+
+@keyframes closeSideBar {
+    from{transform: translateX(0); opacity: 1;}
+    to{transform: translateX(200%); opacity: 0;}
+}
+
+#nav-side-bar-container {
+    position: fixed;
+    height: 100vh;
+    width: 40%;
+    right: 0;
+    top: 0;
+    background-color: white;
+    font-family: 'Roboto';
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: 10;
+}
+
+#nav-side-bar-container.open {
+    transform: translateX(0);
+    opacity: 1;
+    animation: openSideBar .5s ease;
+}
+
+#nav-side-bar-container.closed {
+    transform: translateX(100%);
+    opacity: 0;
+    animation: closeSideBar 1s ease;
+}
+
+#nav-side-bar-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+#nav-side-bar-links li {
+    position: relative;
+    padding: 1rem 0;
+    padding-left: 2rem;
+    color: black;
+}
+
+#nav-side-bar-links li:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+#nav-side-bar-links a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#nav-side-bar-close-window-icon {
+    width: 2rem;
+    height: auto;
+    color: black;
+}
+
+#nav-side-bar-close-window-icon:hover {
+    cursor: pointer; 
+    background-color: gray;
+}

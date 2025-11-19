@@ -1,0 +1,404 @@
+#eboard-page-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* height: 100vh; */
+    /* width: 100%; */
+    /* background-color: black;
+    color: white; */
+    font-family: 'Roboto';
+    overflow-x: hidden;
+}
+
+#eboard-page-container h2 {
+    font-size: 2em;
+    margin-left: 1em;
+    margin-bottom: .5em;
+}
+
+#top-row {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    margin-top: .5em;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+#top-row h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+}
+
+#eboard-page-logo-container {
+    margin-left: auto;
+    margin-right: .5em;
+    height: 5em;
+    width: 5em;
+}
+
+#eboard-page-logo-container:hover {
+    cursor: pointer;
+    transform: scale(1.02, 1.02);
+}
+
+#eboard-page-logo {
+    height: 100%;
+    width: 100%;
+}
+
+#update-upcoming-events-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#update-upcoming-events-section-title {
+    margin-top: 0;
+}
+
+#upcoming-events-list {
+    display: flex;
+    list-style: none;
+    margin-left: 1em;
+    padding: 0;
+}
+
+.upcoming-event-card {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    padding: .5em 1em;
+    background-color: black;
+    color: white;
+    border-radius: 1em;
+    transition: background-color .25s ease;
+}
+
+.upcoming-event-card:hover {
+    cursor: pointer;
+    background-color: rgb(70, 70, 70);
+}
+
+.upcoming-event-card h3 {
+    font-size: 1.2em;
+}
+
+/* IMPORTANT LINKS SECTION */
+#update-important-links-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+#update-important-links-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    overflow: auto;
+    width: 100%;
+    margin-top: .5em;
+    margin-left: 2em;
+}
+
+#important-links-list::-webkit-scrollbar {
+    height: .5em;
+}
+
+#important-links-list::-webkit-scrollbar-track {
+    background-color: darkgray;
+    border-radius: .5em;
+}
+
+#important-links-list::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: .5em;
+}
+
+.important-link-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 12em;
+    width: 10em;
+    background-color: black;
+    margin-right: 1em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border-radius: 1em;
+}
+
+.important-link-card p {
+    color: white;
+    text-align: center;
+    margin: auto .2em;
+}
+
+.important-link-card:hover {
+    transform: scale(1.02, 1.02);
+    cursor: pointer;
+}
+
+.update-important-link-img-container {
+    position: relative;
+    height: 65%;
+    width: 100%;
+    border-radius: 1em 1em 0 0;
+    overflow: hidden;
+}
+
+.update-important-link-img-container img {
+    position: absolute;
+    border-radius: 1em 1em 0 0;
+}
+
+.eboard-page-add-btn {
+    border: 1px solid black;
+    border-radius: 1em;
+    align-self: center;
+    font-size: 1.2em;
+    background-color: transparent;
+    padding: 1em;
+    transition: background-color .25s ease, color .25s ease;
+}
+
+#link-btn {
+    width: 6.7em;
+}
+
+.eboard-page-add-btn:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+/* EDITING WINDOWS */
+
+.editing-window {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: white;
+    background-color: black;
+    height: 85%;
+    width: 65%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 1em;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.editing-window::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    background-color: rgba(0, 0, 0, 0.733);
+    height: 200vh;
+    width: 200vw;
+    z-index: -1;
+}
+
+.editing-window h2 {
+    align-self: center;
+}
+
+.editing-window.visible {
+    display: flex !important;
+}
+
+.editing-window form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5em;
+    padding-right: 5em;
+    overflow-y: auto;
+}
+
+.editing-window form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+.editing-window form input {
+    width: 100%;
+    height: 2em;
+}
+
+#event-form textarea {
+    width: 100%;
+    height: 4em;
+}
+
+#event-date-time-info {
+    display: flex;
+    width: 100%;
+}
+
+#event-date-time-info label {
+    width: 100%;
+}
+
+.event-time-label {
+    margin-left: 1em;
+    flex-shrink: 1.5;
+}
+
+.save-btn {
+    align-self: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding: .5em 1em;
+    background-color: rgb(229, 213, 149);
+    font-size: 1.2em;
+    border: none;
+    border-radius: 1em;
+}
+.save-btn:hover {
+    cursor: pointer;
+    background-color: rgb(255, 223, 96);
+}
+
+.close-editing-window-icon {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    top: 2%;
+    right: 3%;
+    color: white;
+}
+
+.close-editing-window-icon:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+#return-btn {
+    position: relative;
+    align-self: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 1em;
+    /* transition: background-color .25s ease; */
+}
+
+#return-btn:hover {
+    cursor: pointer;
+    transform: scale(1.02, 1.02);
+}
+
+/* EBOARD PAGE POPUP */
+
+#eboard-page-icon-popup {
+    display: none;
+    position: absolute;
+    top: 9.7%;
+    right: 0;
+    background-color: rgb(248, 248, 248);
+    width: 15em;
+    border-radius: 1em;
+    /* box-shadow: -.5em .5em 2em rgb(163, 152, 106); */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#eboard-page-icon-popup.visible {
+    display: block;
+}
+    
+#eboard-page-icon-popup-options-list {
+    list-style: none;
+    padding: 0;
+}
+
+.eboard-page-icon-popup-option {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+}
+
+.eboard-page-icon-popup-option:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+/* CHANGE PASSWORD WINDOW */
+#change-password-window {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* height: 20em; */
+    width: 25em;
+    color: white;
+    background-color: black;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 1em;
+    transform: translate(-50%, -50%);
+}
+
+#change-password-window::before {
+    content: '';
+    position: fixed;
+    top: -100%;
+    background-color: rgba(0, 0, 0, 0.733);
+    height: 200vh;
+    width: 200vw;
+    z-index: -1;
+}
+
+#change-password-window.visible {
+    display: flex;
+}
+
+#change-password-window h2 {
+    margin-left: 0;
+}
+
+#change-password-form {
+    /* align-self: flex-start;
+    padding-left: 2em; */
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 80%;
+}
+
+#change-password-form label {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#change-password-form label input {
+    height: 2em;
+}
+
+#change-password-form,
+#change-password-form label {
+    display: flex;
+    flex-direction: column;
+}
+
+#update-password-btn {
+    margin-top: 1em;
+}
+
+#change-password-error-message {
+    display: none;
+}
+
+#change-password-error-message.visible {
+    display: block;
+}

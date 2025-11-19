@@ -1,0 +1,119 @@
+#nav-body {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+    /* background-color: rgb(229, 213, 149); */
+    box-shadow: .1em .1em .5em rgb(182, 165, 100);
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0);
+    transform: translateY(-6em);
+    transition: transform .25s ease;
+}
+
+#nav-body.scrolled {
+    backdrop-filter: blur(10px) !important;
+    transform: translateY(0) !important;
+    box-shadow: none;
+}
+
+#nav-body.at-top {
+    background-color: rgb(229, 213, 149) !important;
+    /* border-bottom: 1px solid rgb(201, 199, 178) !important; */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+}
+
+.nav-links li {
+    overflow: hidden;
+}
+
+.nav-links a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 1.5em;
+    padding: .5em 1em;
+    transition: background-color .25s ease, color .25s ease;
+}
+
+.nav-links a:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#nav-links-left li {
+    margin-left: 1em;
+}
+
+#nav-links-right li {
+    margin-right: 1em;
+}
+
+#logo {
+    width: 5em;
+    height: auto;
+    z-index: 2;
+    align-self: center;
+    margin: 0 1em;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#login-field {
+    position: absolute;
+    bottom: -100%;
+}
+
+.active {
+    background-color: black !important;
+    color: white !important;
+}
+
+#hamburger-menu-icon {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+@media(max-width: 806px) {
+    #nav-body {
+        /* background-color: green; */
+        justify-content: space-between;
+    }
+
+    #hamburger-menu-icon {
+        display: block;
+        width: 4em;
+        height: auto;
+        padding: .5em;
+    }
+
+    #hamburger-menu-icon:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.151);
+    }
+
+    #nav-links-left,
+    #nav-links-right {
+        display: none;
+    }
+
+    .active {
+        background-color: transparent !important;
+        color: black !important;
+    }
+}

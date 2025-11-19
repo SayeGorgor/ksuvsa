@@ -1,0 +1,47 @@
+#logo-window-container {
+    position: relative;
+    display: none;
+}
+
+#logo-window-container.visible {
+    display: block;
+}
+
+#logo-window {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 5.5em;
+    left: 44.15%;
+    height: 2em;
+    width: 10em;
+    background-color: white;
+    border-radius: .5em;
+    z-index: 6;
+}
+
+#logo-window:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+#logo-window::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 40%;
+    top: -40%;
+    transform: rotate(180deg);
+    border-left: .9em solid transparent;
+    border-right: .9em solid transparent;
+    border-top: .9em solid white;
+}
+
+#logo-window p {
+    font-family: 'Roboto';
+    font-size: 1.1em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: .5em;
+}

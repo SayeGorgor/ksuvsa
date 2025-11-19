@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+#login-page-container {
+    height: 100vh;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    font-family: 'Roboto';
+    z-index: 6;
+}
+
+#login-page-container::before {
+    content: '';
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.733);
+    height: 100vh;
+    width: 100vw;
+}
+
+#login-page-container.visible {
+    display: flex;
+}
+
+#login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30em;
+    height: 35em;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    border: 2px solid rgb(63, 63, 63);
+    border-radius: 1em;
+}
+
+#login-form-container a {
+    margin-top: 1em;
+    color: white;
+    font-size: .9em;
+}
+
+#login-logo {
+    height: 10em;
+    width: 10em;
+    margin-top: 2em;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+}
+
+#login-form input {
+    background-color: black;
+    color: white;
+    border: .5px solid rgb(63, 63, 63);
+    border-radius: .5em;
+    width: 18em;
+    height: 2em;
+    margin-bottom: 1em;
+}
+
+#login-form button {
+    width: 13em;
+    margin-top: 1em;
+    padding: .3em;
+    font-size: 1.2em;
+    background-color: rgb(250, 233, 16);
+    border: none;
+    border-radius: .5em;
+    transition: background-color .25s ease;
+}
+
+#login-form button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 243, 78);
+}
+
+#close-window-icon {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    top: 2%;
+    right: 3%;
+    color: white;
+}
+
+#close-window-icon:hover {
+    background-color: gray;
+    cursor: pointer;
+}

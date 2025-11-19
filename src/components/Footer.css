@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+#footer-body {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: darkgray;
+    font-family: 'Roboto';
+}
+
+#footer-body h5 {
+    font-size: clamp(.8rem, 2vw + .1rem, 1.2rem);
+    margin-bottom: 1em;
+}
+
+#footer-body p,
+#footer-body a {
+    font-size: clamp(.6rem, 1.8vw + .1rem, 1rem);
+}
+
+/* DESCRIPTION SECTION */
+
+#description-section,
+#browse-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#description-section h5 {
+    margin-top: .5em;
+    margin-left: .1em;
+}
+
+#description-section p {
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    margin-left: .1em;
+    max-width: 15em;
+}
+
+#footer-logo-container {
+    margin-top: 1em;
+    margin-bottom: 0;
+    height: clamp(3rem, calc(6.5vw + 1rem), 5rem);
+    width: clamp(3rem, calc(6.5vw + 1rem), 5rem);
+}
+
+#footer-logo-container img {
+    height: 100%;
+    width: 100%;
+}
+
+/* BROWSE SECTION */
+
+#browse-section {
+    margin-bottom: .5em;
+    margin-right: .1rem;
+}
+
+#browse-section a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: .5em;
+}
+
+#browse-section a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* CONTACT SECTION */
+
+#contact-section p {
+    margin-bottom: .8em;
+}
+
+#footer-contact-links {
+    display: flex;
+    list-style: none;
+    margin-top: 1.5em;
+    padding: 0;
+}
+
+.footer-contact-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 1em;
+    height: clamp(1.5rem, calc(4vw + 1rem), 3rem);
+    width: clamp(1.5rem, calc(4vw + 1rem), 3rem);
+    background-color: black;
+    border-radius: .5em;
+}
+
+.footer-contact-link a {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-contact-link:hover {
+    cursor: pointer;
+    transform: scale(1.02, 1.02);
+}
+
+.social-media-icon {
+    color: white;
+    height: 100%;
+    width: auto;
+    margin: 0;
+}
+
+#footer-facebook-icon {
+    height: 80%;
+    width: auto;
+    margin: auto;
+    margin-left: .35em;
+}
+
+#footer-groupme-icon {
+    height: 93%;
+    width: auto;
+    margin: auto;
+    margin-right: .09em;
+}
+
+#footer-owllife-icon {
+    height: 90%;
+    width: auto;
+    margin: auto;
+    margin-right: .15em;
+}
+
+/* MEDIA QUERIES */
+@media(max-width: 650px) {
+
+    /* #browse-section {
+        display: none;
+    } */
+}

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+#calendar-page-body {
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#columns {
+    margin: auto 3%;
+    width: 94%;
+    display: flex;
+    align-items: start;
+}
+
+#upcoming-title {
+    margin-bottom: 2em;
+}
+
+#upcoming-title h2 {
+    font-size: 2.8em;
+    margin: 0;
+    margin-top: .3em;
+    margin-left: .1em;
+}
+
+#upcoming-title h3 {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: rgb(63, 63, 63);
+    margin-top: .5em;
+    margin-left: .3em;
+}
+
+.column {
+    margin-right: 2em;
+    width: 30%;
+}
+
+#event-column {
+    margin-top: 1em;
+}
+
+#event-card-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar {    
+    width: 70%;
+    background-color: rgb(245, 245, 56);
+    margin-bottom: 1em;
+    margin-top: 2em;
+    border-radius: 2em;
+    
+}
+
+.event-card {
+    /* border: 1px solid black; */
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0;
+    background-color: rgb(245, 245, 56);
+    /* box-shadow: .5em .5em 1em rgb(129, 100, 2); */
+}
+
+.event-date {
+    border: 1px solid black;
+    font-size: 2rem;
+    width: 2em;
+    text-align: center;
+    padding: 4%;
+    margin: 0;
+    background-color: black;
+    color: white;
+    border-radius: .5em 0 0 .5em;
+}
+
+.event-info {
+    margin-left: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.event-info h4{
+    font-size: clamp(1.3rem, calc(1.5vw + .5rem), 1.8rem);
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.event-info h5{
+    margin: 0;
+    margin-left: .15em;
+    font-size: clamp(.8rem, calc(.5vw + .5rem), 1rem);
+}
+
+.event-info .event-location {
+    margin-bottom: .5em;
+}
+
+.hr {
+   width: 100%;
+   height: 2px;
+   background-color: black;
+   border: 1px solid black;
+}
+
+/* MEDIA QUERIES */
+@media(max-width: 823px) {
+    #calendar-page-body {
+        /* background-color: green; */
+    }
+
+    #columns {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    #event-card-list {
+        flex-direction: row;
+        width: 100%;
+        /* background-color: gray; */
+        overflow: auto;
+    }
+
+    #event-card-list li {
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    .event-card {
+        width: 15rem;
+    }
+
+    .calendar {
+        width: 100%;
+    }
+}

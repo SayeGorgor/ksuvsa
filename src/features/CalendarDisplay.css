@@ -1,0 +1,243 @@
+#calendar {
+    display: grid;
+    grid-template: 1fr 0.5fr repeat(6, 1fr) / repeat(7, 1fr) !important;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+.cell {
+    border: 1px solid rgb(228, 226, 226);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex: 1;
+    min-width: 0;
+    min-height: 4.5em;
+    padding-top: .3em;
+    padding-left: .3em;
+    padding-bottom: .3em;
+    background-color: white;
+}
+
+.weekday-cell {
+    border-bottom: 1px solid rgb(202, 202, 202);
+    padding-top: .7em;
+    text-align: center;
+    background-color: white;
+}
+
+#Sunday,
+[id="0"],
+[id="7"],
+[id="14"],
+[id="21"],
+[id="28"],
+[id="35"] {
+    border-left: 1px solid darkgray;
+}
+
+#Saturday,
+[id="6"],
+[id="13"],
+[id="20"],
+[id="27"],
+[id="34"],
+[id="41"] {
+    border-right: 1px solid darkgray;
+}
+
+[id="35"],
+[id="36"],
+[id="37"],
+[id="38"],
+[id="39"],
+[id="40"],
+[id="41"] {
+    border-bottom: 1px solid darkgray;
+}
+
+#selector-tab {
+    grid-area: 1 / 1 / span 1 / span 7;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(199, 199, 199);   
+    border-bottom: 1px solid lightgray;
+    border-radius: 2em 2em 0 0;
+}
+
+#selector-tab select {
+    padding: .5em;
+    margin: .5em;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.arrow {
+    height: 2em;
+    width: 1.4em;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: .5em;
+    margin-right: 1em;
+    border-radius: 1em;
+    width: 8em;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.dropdown:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown:hover .arrow {
+    color: white;
+}
+
+.dropdown p, 
+.dropdown-menu li {
+    font-family:'Segoe UI', sans-serif;
+    font-size: 1.25em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li:hover { 
+    background-color: rgb(145, 145, 145);
+}
+
+.dropdown-menu-options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-option-wrapper {
+    padding-left: .5em;
+}
+
+.bottom-li {
+    padding-bottom: .5em;
+    border-radius: 0 0 .75em .75em;
+}
+
+#month-dropdown {
+    position: relative;
+}
+
+#month-dropdown-menu {
+    position: absolute;
+    background-color: black;
+    width: 9.25em;
+    top: 77%;
+    left: -0.1em;
+    /* transform: translateX(-100%); */
+    border-radius: 0 0 1em 1em;
+}
+
+.current-dropdown-option {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#year-dropdown {
+    width: 5em;
+    position: relative;
+}
+
+#year-dropdown-menu {
+    position: absolute;
+    background-color: black;
+    width: 6.25em;
+    top: 77%;
+    left: -0.1em;
+    /* transform: translateX(-50%); */
+    border-radius: 0 0 1em 1em;
+}
+
+[id="35"] {
+    border-bottom-left-radius: 2em;
+}
+
+[id="41"] {
+    border-bottom-right-radius: 2em;
+}
+
+.disabled-cell {
+    background-color: rgb(160, 160, 160);
+}
+
+.event-badge {
+    justify-self: center;
+    align-self: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    width: 70%;
+    background-color: rgb(245, 245, 56);
+    border-radius: 1em;
+    box-sizing: border-box;
+    margin-bottom: 1.35em;
+    margin-right: .3em;
+    padding: .3em;
+    margin-top: 1.35em;
+    flex-shrink: 2;
+}
+
+.event-badge:hover {
+    background-color: rgb(248, 248, 128);
+    cursor: pointer;
+}
+
+#event-display {
+    position: fixed;
+    bottom: 80%;
+    height: 10em;
+    width: 10em;
+    border: 3px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hide {
+    display: none !important;
+}
+
+.open {
+    background-color: black;
+    color: white;
+}
+
+/* MEDIA QUERIES */
+@media(max-width:500px) {
+    .weekday-cell::first-line {
+        max-width: 1rem;
+        overflow: hidden;
+    }
+
+    .weekday-cell p {
+        width: 1px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
