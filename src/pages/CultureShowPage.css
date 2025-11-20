@@ -741,4 +741,12 @@
     #theme-header {
         font-size: 4rem !important;
     }
+
+    #blank {
+        display: none;
+    }
+
+    #join-us-img {
+        object-fit: contain;
+    }
 }
