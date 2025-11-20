@@ -27,7 +27,7 @@ const NavBar = () => {
         let lastScroll = 0;
 
         const handleScroll = () => {
-            let currentScroll = window.scrollY;
+            let currentScroll = Math.max(0, window.scrollY);
             if(currentScroll < 10) {
                 nav.classList.add('at-top');
             } else {

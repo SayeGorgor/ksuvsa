@@ -6,8 +6,8 @@
 /* ANIMATIONS */
 /* media-header */
 @keyframes mediaSlideUp {
-    from {transform: translate(400%, 250%) scale(1, 1);}
-    to {transform: translate(0, 0) scale(0.5, 0.5);}
+    from {transform: translate(-100%, 100%) scale(1, 1);}
+    to {transform: translate(-440%, -230%) scale(0.5, 0.5);}
 }
 
 @keyframes mediaSlideDown {
@@ -16,14 +16,20 @@
 }
 
 @keyframes mediaSlideUpSmallScreen {
-    from {transform: translate(400%, 250%) scale(1, 1);}
-    to {transform: translate(0, -80%) scale(0.5, 0.5);}
+    from {transform: translate(0, 150%) scale(1, 1);}
+    to {transform: translate(-400%, -200%) scale(0.5, 0.5);}
 }
 
 @keyframes mediaSlideDownSmallScreen {
     from {transform: translate(-340%, -300%) scale(0.5, 0.5);}
     to {transform: translate(0, 0) scale(1, 1);}
 }
+
+@keyframes mediaSlideUpMobile {
+    from {transform: translate(30%, -10%) scale(1, 1);}
+    to {transform: translate(-300%, -500%) scale(0.5, 0.5);}
+}
+
 
 @keyframes mediaContentsSlideIn {
     from {transform: translateX(100%); opacity: 0;}
@@ -130,7 +136,7 @@
 
 #annual-text {
     position: absolute;
-    bottom: 5vw;
+    bottom: calc(4vw + 1rem);
     left: 1em;
     color: white;
     /* font-size: 3.5em; */
@@ -290,7 +296,7 @@
     font-family: 'Yesteryear';
     margin-top: .1em;
     margin-left: clamp(1rem, calc(25vw - 10rem), 10rem);
-    font-size: 6em;
+    font-size: 6rem;
 }
 
 #theme-header.showing {
@@ -403,6 +409,7 @@
 
 #media-section.showing {
     position: relative !important;
+    margin-left: auto;
 }
 
 #media-section.showing::before {
@@ -425,9 +432,9 @@
 }
 
 #media-header.showing {
-    top: -25%;
-    left: min(0%, calc(100vw - 54rem));
-    transform: scale(0.5, 0.5);
+    /* top: -25%;
+    left: min(0%, calc(100vw - 54rem)); */
+    transform: translate(400%, 250%) scale(0.5, 0.5);
     animation: mediaSlideUp 1s ease;
 }
 
@@ -668,6 +675,7 @@
 @media(max-width:830px) {
     #media-header.showing{
         animation: mediaSlideUpSmallScreen 1s ease;
+        transform: translate(400%, 250%);
     }
 
     #media-header.closing {
@@ -705,5 +713,32 @@
 
     #cs-page-abt-section {
         height: auto;
+    }
+
+    #photo-carousel {
+        width: 30rem;
+    }
+
+    #photo-carousel img {
+        width: 30rem;
+    }
+
+    #theme-header {
+        margin-left: 3rem;
+    }
+
+    #media-header {
+        bottom: -12% !important;
+        right: 20% !important;
+    }
+    
+    #media-header.showing {
+        animation: mediaSlideUpMobile 1s ease;
+        transform: translate(0, -600%);
+    }
+
+    #media-header,
+    #theme-header {
+        font-size: 4rem !important;
     }
 }
