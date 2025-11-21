@@ -12,6 +12,7 @@ const LogoWindow = () => {
 
     //Functions
     const handleEboardLoginClick = () => {
+        dispatch(setShowLogoWindow(false));
         dispatch(setShowLoginField(true));
     }
 
