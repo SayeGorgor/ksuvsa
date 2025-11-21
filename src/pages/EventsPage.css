@@ -24,7 +24,8 @@
 #events-page-hero-container {
     display: flex;
     position: relative;
-    height: 86.9dvh;
+    height: calc(100vh - 5rem);
+    height: calc(100svh - 5rem);
     width: 100%;
     color: white;
     /* background-color: white;
