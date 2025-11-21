@@ -78,6 +78,7 @@
     padding: .3em;
     font-size: 1.2em;
     background-color: rgb(250, 233, 16);
+    color: black;
     border: none;
     border-radius: .5em;
     transition: background-color .25s ease;
