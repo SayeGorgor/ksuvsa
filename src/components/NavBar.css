@@ -88,6 +88,20 @@
     display: none;
 }
 
+/* Overlay */
+#screen-overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.222);
+    z-index: 10;
+}
+
+#screen-overlay.visible {
+    display: block !important;
+}
+
 /* MEDIA QUERIES */
 @media(max-width: 806px) {
     #nav-body {

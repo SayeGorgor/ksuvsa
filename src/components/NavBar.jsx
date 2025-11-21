@@ -11,8 +11,11 @@ import NavSideBar from './NavSideBar';
 import HamburgerMenuIcon from '../assets/hamburger_menu_icon.svg?react';
 
 const NavBar = () => {
+    //Redux
     const showLogoWindow = useSelector(state => state.navBar.showLogoWindow);
+    const showSideBar = useSelector(state => state.navBar.showSideBar);
     const dispatch = useDispatch();
+
     //Functions
     const handleLogoClick = (e) => {
         e.stopPropagation();
@@ -23,6 +26,11 @@ const NavBar = () => {
     const toggleHamburgerMenu = () => {
         dispatch(setPreventAnimations(false));
         dispatch(setShowSideBar(true));
+    }
+
+    const closeSideBarOnScreenClick = (e) => {
+        e.stopPropagation();
+        dispatch(setShowSideBar(false));
     }
 
     //Use Effect
@@ -53,6 +61,8 @@ const NavBar = () => {
 
     return(
         <>
+            <div id='screen-overlay' className={showSideBar ? 'visible' : ''} 
+                 onClick={(e) => closeSideBarOnScreenClick(e)}></div>
             <nav id='nav-body' className='scrolled'>
                 {/* <LoginField id='login-field' className='showing' /> */}
                 <ul id='nav-links-left' className='nav-links'>
