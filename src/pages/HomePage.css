@@ -420,3 +420,55 @@
         margin-left: clamp(2.65rem, calc(5vw + 1rem), 7.5rem);
     }
 }
+
+@media(max-width:480px) {
+    #hero-title {
+        font-size: 5rem;
+    }
+
+    #hero-description {
+        font-size: 2rem;
+    }
+
+    #eboard-section {
+        height: auto;
+    }
+
+    #eboard-section h2 {
+        margin-top: 2rem;
+        margin-bottom: .5rem;
+    }
+
+    #eboard-card-list-container {
+        margin-bottom: 2rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #eboard-card-list {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #eboard-card-list::-webkit-scrollbar {
+        display: block;
+        height: .5rem;
+    }
+    
+    #eboard-card-list::-webkit-scrollbar-thumb {
+        background-color: white;
+        border-radius: 1rem;
+    }
+
+    .eboard-card {
+        margin-left: calc((100vw - 15rem) / 2);
+    }
+
+    #chloe {
+        margin-right: calc((100vw - 15rem) / 2);
+    }
+
+    .arrow {
+        display: none;
+    }
+}

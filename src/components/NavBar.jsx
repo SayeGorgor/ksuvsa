@@ -32,11 +32,11 @@ const NavBar = () => {
                 nav.classList.add('at-top');
             } else {
                 nav.classList.remove('at-top');
-            }
-            if (currentScroll < lastScroll) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
+                if (currentScroll < lastScroll) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
             }
             lastScroll = currentScroll;
         };
