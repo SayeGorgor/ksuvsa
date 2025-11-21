@@ -18,7 +18,12 @@ const NavBar = () => {
 
     //Functions
     const handleLogoClick = (e) => {
+        const logoWindow = document.getElementById('logo-window-container');
+        const logoLeft = document.getElementById('logo-container').getBoundingClientRect().left;
+        console.log(logoWindow);
+
         e.stopPropagation();
+        logoWindow.style.left = `${Math.max(0, logoLeft - 20)}px`;
         dispatch(setShowLogoWindow(true));
         console.log('Show Logo: ', showLogoWindow);
     }
@@ -58,6 +63,16 @@ const NavBar = () => {
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // useEffect(() => {
+    //     if(showLogoWindow) {
+    //         const logoWindow = document.getElementById('logo-window');
+    //         const logoLeft = document.getElementById('logo-container').getBoundingClientRect().left;
+    //         console.log('Logo Left: ', logoLeft);
+            
+    //         if(logoWindow) logoWindow.style.left = `${logoLeft}px`;
+    //     }
+    // }, [showLogoWindow]);
 
     return(
         <>

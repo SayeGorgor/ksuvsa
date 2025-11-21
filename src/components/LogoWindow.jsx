@@ -41,12 +41,20 @@ const LogoWindow = () => {
         }
     }, [showLogoWindow]);
 
+    //Reset logo window's position on smaller screens
+    // useEffect(() => {
+    //     const screenWidth = window.innerWidth;
+    //     const assignLogoWindowPosition = () => {
+
+    //     }
+    // })
+
     return(
-        <div id='logo-window-container' className={showLogoWindow ? 'visible' : ''}
+        <div id='logo-window-container' 
+             className={showLogoWindow ? 'visible' : ''}
+             onClick={handleEboardLoginClick}
              ref={logoWindowRef}>
-            <div id='logo-window' onClick={handleEboardLoginClick}>
-                <p>Eboard Log In</p>
-            </div>
+            <p>Eboard Log In</p>
         </div>
     );
 }

@@ -1,31 +1,29 @@
 #logo-window-container {
-    position: relative;
-    display: none;
-}
-
-#logo-window-container.visible {
-    display: block;
-}
-
-#logo-window {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 5.5em;
-    left: 44.15%;
+    top: 4.65em;
+    /* left: 44.15%; */
     height: 2em;
     width: 10em;
     background-color: white;
     border-radius: .5em;
+    opacity: 0;
+    pointer-events: none;
     z-index: 6;
 }
 
-#logo-window:hover {
+#logo-window-container.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#logo-window-container:hover {
     cursor: pointer;
     background-color: lightgray;
 }
 
-#logo-window::after {
+/* #logo-window-container::after {
     content: '';
     position: absolute;
     height: 0;
@@ -36,9 +34,9 @@
     border-left: .9em solid transparent;
     border-right: .9em solid transparent;
     border-top: .9em solid white;
-}
+} */
 
-#logo-window p {
+#logo-window-container p {
     font-family: 'Roboto';
     font-size: 1.1em;
     margin-top: auto;

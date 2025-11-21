@@ -101,3 +101,15 @@
     background-color: gray;
     cursor: pointer;
 }
+
+/* MEDIA QUERIES */
+    @media(max-width:550px) {
+        #login-form-container {
+            width: 80vw;
+            height: auto;
+        }
+
+        #login-form-container a {
+            margin-bottom: 3rem;
+        }
+    }

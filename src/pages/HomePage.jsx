@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Arrow from '../assets/eboard_arrow.svg?react';
-import { emToPx } from '../helpers/helpers';
 import './HomePage.css';
 
 const Home = () => {

@@ -279,7 +279,8 @@
     }
 
     #social-media-links-section {
-        margin-top: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     #right-column {
@@ -292,6 +293,7 @@
 
     #contact-header h2 {
         font-size: clamp(.86rem, calc((3vw + 1rem) / 2.3), 1.3rem);
+        margin-bottom: 0;
     }
 
     #right-column h3 {
