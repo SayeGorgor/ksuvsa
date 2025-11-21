@@ -24,7 +24,7 @@
 #events-page-hero-container {
     display: flex;
     position: relative;
-    height: 86.9vh;
+    height: 86.9dvh;
     width: 100%;
     color: white;
     /* background-color: white;
@@ -58,7 +58,7 @@
 }
 
 .section {
-    height: 90vh;
+    height: 90dvh;
     width: 100%;
     display: flex;
     align-items: center;
