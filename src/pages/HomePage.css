@@ -458,6 +458,7 @@
     
     #eboard-card-list::-webkit-scrollbar-thumb {
         background-color: white;
+        color: white;
         border-radius: 1rem;
     }
 
