@@ -85,7 +85,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    margin-right: 1em;
+    margin-right: clamp(.5rem, calc(1vw + .1rem), 1rem);
     height: clamp(1.5rem, calc(4vw + 1rem), 3rem);
     width: clamp(1.5rem, calc(4vw + 1rem), 3rem);
     background-color: black;
@@ -114,7 +114,7 @@
     height: 80%;
     width: auto;
     margin: auto;
-    margin-left: .35em;
+    /* margin-left: em; */
 }
 
 #footer-groupme-icon {
@@ -128,13 +128,13 @@
     height: 90%;
     width: auto;
     margin: auto;
-    margin-right: .15em;
+    margin-bottom: .2rem;
 }
 
 /* MEDIA QUERIES */
-@media(max-width: 650px) {
+@media(max-width: 480px) {
 
-    /* #browse-section {
-        display: none;
-    } */
+    #footer-owllife-icon {
+        margin-bottom: .1rem;
+    }
 }
