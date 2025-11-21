@@ -5,7 +5,8 @@ export const navBarSlice = createSlice({
     initialState: {
         showSideBar: false,
         showLogoWindow: false,
-        showLoginField: false
+        showLoginField: false,
+        preventAnimations: true
     },
     reducers: {
         setShowSideBar: (state, action) => {
@@ -17,9 +18,17 @@ export const navBarSlice = createSlice({
         setShowLogoWindow: (state, action) => {
             state.showLogoWindow = action.payload;
         },
+        setPreventAnimations: (state, action) => {
+            state.preventAnimations = action.payload;
+        }
     }
 });
 
-export const { setShowSideBar, setShowLoginField, setShowLogoWindow } = navBarSlice.actions;
+export const { 
+    setShowSideBar, 
+    setShowLoginField, 
+    setShowLogoWindow,
+    setPreventAnimations 
+} = navBarSlice.actions;
 
 export default navBarSlice.reducer;

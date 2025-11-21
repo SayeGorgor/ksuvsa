@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setShowLogoWindow, setShowSideBar } from '../features/NavBar/navBarSlice';
+import { setShowLogoWindow, setShowSideBar, setPreventAnimations } from '../features/NavBar/navBarSlice';
 
 import LogoWindow from './LogoWindow';
 import LoginField from './LoginField';
@@ -18,6 +18,11 @@ const NavBar = () => {
         e.stopPropagation();
         dispatch(setShowLogoWindow(true));
         console.log('Show Logo: ', showLogoWindow);
+    }
+
+    const toggleHamburgerMenu = () => {
+        dispatch(setPreventAnimations(false));
+        dispatch(setShowSideBar(true));
     }
 
     //Use Effect
@@ -75,7 +80,7 @@ const NavBar = () => {
                         <NavLink to='/contact'>Contact</NavLink>
                     </li>
                 </ul>
-                <HamburgerMenuIcon id='hamburger-menu-icon' onClick={() => dispatch(setShowSideBar(true))} />
+                <HamburgerMenuIcon id='hamburger-menu-icon' onClick={toggleHamburgerMenu} />
             </nav>
             <NavSideBar id='nav-side-bar' />
             <LogoWindow />

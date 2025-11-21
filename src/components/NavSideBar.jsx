@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavSideBar.css';
 
@@ -11,22 +11,13 @@ const NavSideBar = () => {
     //Redux
     const dispatch = useDispatch();
     const showSideBar = useSelector(state => state.navBar.showSideBar);
+    const preventAnimations = useSelector(state => state.navBar.preventAnimations);
 
-    //Functions
-    const openSideBar = () => {
-        const sideBar = document.getElementById('nav-side-bar-container');
-        sideBar.classList.add('open');
-        sideBar.classList.remove('closed');
-        sideBar.removeAttribute('inert');
-    }
-    const closeSideBar = () => {
-        const sideBar = document.getElementById('nav-side-bar-container');
-        sideBar.classList.remove('open');
-        sideBar.classList.add('closed');
-        sideBar.setAttribute('inert', '');
-    }
     return(
-        <nav id='nav-side-bar-container' className={showSideBar ? 'open' : 'closed'} inert={showSideBar ? undefined : ''}>
+        <nav id='nav-side-bar-container' 
+             className={`${showSideBar ? 'open' : 'closed'} 
+                         ${preventAnimations ? 'prevent-mount-animation' : ''}`} 
+             inert={showSideBar ? undefined : ''}>
             <CloseWindowIcon id='nav-side-bar-close-window-icon' onClick={() => dispatch(setShowSideBar(false))} /> 
             <ul id='nav-side-bar-links'>
                 <li>
