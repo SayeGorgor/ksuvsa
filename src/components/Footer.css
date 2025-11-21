@@ -71,13 +71,13 @@
 /* CONTACT SECTION */
 
 #contact-section p {
-    margin-bottom: .8em;
+    margin-bottom: .8rem;
 }
 
 #footer-contact-links {
     display: flex;
     list-style: none;
-    margin-top: 1.5em;
+    margin-top: 1.5rem;
     padding: 0;
 }
 
@@ -133,7 +133,10 @@
 
 /* MEDIA QUERIES */
 @media(max-width: 480px) {
-
+    #footer-contact-links {
+        margin-top: 1rem;
+    }
+    
     #footer-owllife-icon {
         margin-bottom: .1rem;
     }
