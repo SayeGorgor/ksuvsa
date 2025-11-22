@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import Arrow from '../assets/eboard_arrow.svg?react';
+import { useState, useEffect } from 'react';
 import './HomePage.css';
+
+import CSScrollBar from '../components/CSScrollBar';
+import Arrow from '../assets/eboard_arrow.svg?react';
 
 const Home = () => {
     //Use State
     const [currentCard, setCurrentCard] = useState(0);
     
     //Functions
-
     const handleCardClick = (e) => {
         e.currentTarget.classList.toggle('show-info');
         e.currentTarget.children[0].classList.toggle('show-info');
@@ -35,6 +36,12 @@ const Home = () => {
             card.children[0].classList.remove('show-info');
         }
     }
+
+    //Use Effect
+    useEffect(() => {
+        const homeHero = document.getElementById('hero');
+        homeHero.style.height = `${window.innerHeight - 80}px`;
+    }, []);
 
     return(
         <div id='home-body'>
@@ -64,116 +71,116 @@ const Home = () => {
                 <h2>Meet Our Eboard!</h2>
                 <div id='eboard-card-list-container'>
                     <Arrow id='back-arrow' className={`arrow ${currentCard !== 0 && 'visible'}`} onClick={(e) => handleArrowClick(e)} />
-                    <ul id='eboard-card-list'>
-                        <li>
-                            <div id='gisel' className='eboard-card' onClick={(e) => handleCardClick(e)}>
-                                <div className='info'>
-                                    <h3>Gisel Le</h3>
-                                    <div className='eboard-card-roles'>
-                                        <h4>President</h4>
-                                        <h4>3rd Year</h4>
-                                        <h4>Interactive Design</h4>
+                        <ul id='eboard-card-list'>
+                            <li>
+                                <div id='gisel' className='eboard-card' onClick={(e) => handleCardClick(e)}>
+                                    <div className='info'>
+                                        <h3>Gisel Le</h3>
+                                        <div className='eboard-card-roles'>
+                                            <h4>President</h4>
+                                            <h4>3rd Year</h4>
+                                            <h4>Interactive Design</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div id='jenny' className='eboard-card' onClick={(e) => handleCardClick(e)}>
-                                <div className='info'>
-                                    <h3>Jenny Pham</h3>
-                                    <div className='eboard-card-roles'>
-                                        <h4>Internal President</h4>
-                                        <h4>3rd Year</h4>
-                                        <h4>Nursing</h4>
+                            </li>
+                            <li>
+                                <div id='jenny' className='eboard-card' onClick={(e) => handleCardClick(e)}>
+                                    <div className='info'>
+                                        <h3>Jenny Pham</h3>
+                                        <div className='eboard-card-roles'>
+                                            <h4>Internal President</h4>
+                                            <h4>3rd Year</h4>
+                                            <h4>Nursing</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div id='hoang' className='eboard-card' onClick={(e) => handleCardClick(e)}>
-                                <div className='info'>
-                                    <h3>Hoang Nguyen</h3>
-                                    <div className='eboard-card-roles'>
-                                        <h4>External VP</h4>
-                                        <h4>2nd Year</h4>
-                                        <h4>Cybersecurity</h4>
+                            </li>
+                            <li>
+                                <div id='hoang' className='eboard-card' onClick={(e) => handleCardClick(e)}>
+                                    <div className='info'>
+                                        <h3>Hoang Nguyen</h3>
+                                        <div className='eboard-card-roles'>
+                                            <h4>External VP</h4>
+                                            <h4>2nd Year</h4>
+                                            <h4>Cybersecurity</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div id='tiffany' className='eboard-card' onClick={(e) => handleCardClick(e)}>
-                                <div className='info'>
-                                    <h3>Tiffany Le</h3>
-                                    <div className='eboard-card-roles'>
-                                        <h4>Secretary</h4>
-                                        <h4>3rd Year</h4>
-                                        <h4>Integrated Health Science</h4>
+                            </li>
+                            <li>
+                                <div id='tiffany' className='eboard-card' onClick={(e) => handleCardClick(e)}>
+                                    <div className='info'>
+                                        <h3>Tiffany Le</h3>
+                                        <div className='eboard-card-roles'>
+                                            <h4>Secretary</h4>
+                                            <h4>3rd Year</h4>
+                                            <h4>Integrated Health Science</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div id='joy' className='eboard-card' onClick={(e) => handleCardClick(e)}>
-                                <div className='info'>
-                                    <h3>Joy Johnson</h3>
-                                    <div className='eboard-card-roles'>
-                                        <h4>Event Coordinator</h4>
-                                        <h4>3rd Year</h4>
-                                        <h4>International Affairs</h4>
+                            </li>
+                            <li>
+                                <div id='joy' className='eboard-card' onClick={(e) => handleCardClick(e)}>
+                                    <div className='info'>
+                                        <h3>Joy Johnson</h3>
+                                        <div className='eboard-card-roles'>
+                                            <h4>Event Coordinator</h4>
+                                            <h4>3rd Year</h4>
+                                            <h4>International Affairs</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div id='shannon' className='eboard-card' onClick={(e) => handleCardClick(e)}>
-                                <div className='info'>
-                                    <h3>Shannon Lim</h3>
-                                    <div className='eboard-card-roles'>
-                                        <h4>Treasurer</h4>
-                                        <h4>2nd Year</h4>
-                                        <h4>Management</h4>
+                            </li>
+                            <li>
+                                <div id='shannon' className='eboard-card' onClick={(e) => handleCardClick(e)}>
+                                    <div className='info'>
+                                        <h3>Shannon Lim</h3>
+                                        <div className='eboard-card-roles'>
+                                            <h4>Treasurer</h4>
+                                            <h4>2nd Year</h4>
+                                            <h4>Management</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div id='mechelle' className='eboard-card' onClick={(e) => handleCardClick(e)}>
-                                <div className='info'>
-                                    <h3>Mechelle Le</h3>
-                                    <div className='eboard-card-roles'>
-                                        <h4>Food Coordinator</h4>
-                                        <h4>4th Year</h4>
-                                        <h4>Interactive Design</h4>
+                            </li>
+                            <li>
+                                <div id='mechelle' className='eboard-card' onClick={(e) => handleCardClick(e)}>
+                                    <div className='info'>
+                                        <h3>Mechelle Le</h3>
+                                        <div className='eboard-card-roles'>
+                                            <h4>Food Coordinator</h4>
+                                            <h4>4th Year</h4>
+                                            <h4>Interactive Design</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div id='cierra' className='eboard-card' onClick={(e) => handleCardClick(e)}>
-                                <div className='info'>
-                                    <h3>Cierra Henry</h3>
-                                    <div className='eboard-card-roles'>
-                                        <h4>Membership Coordinator</h4>
-                                        <h4>3rd Year</h4>
-                                        <h4>Integrated Health Science</h4>
+                            </li>
+                            <li>
+                                <div id='cierra' className='eboard-card' onClick={(e) => handleCardClick(e)}>
+                                    <div className='info'>
+                                        <h3>Cierra Henry</h3>
+                                        <div className='eboard-card-roles'>
+                                            <h4>Membership Coordinator</h4>
+                                            <h4>3rd Year</h4>
+                                            <h4>Integrated Health Science</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div id='chloe' className='eboard-card' onClick={(e) => handleCardClick(e)}>
-                                <div className='info'>
-                                    <h3>Chloe Park</h3>
-                                    <div className='eboard-card-roles'>
-                                        <h4>Historian</h4>
-                                        <h4>3rd Year</h4>
-                                        <h4>Nursing</h4>
+                            </li>
+                            <li>
+                                <div id='chloe' className='eboard-card' onClick={(e) => handleCardClick(e)}>
+                                    <div className='info'>
+                                        <h3>Chloe Park</h3>
+                                        <div className='eboard-card-roles'>
+                                            <h4>Historian</h4>
+                                            <h4>3rd Year</h4>
+                                            <h4>Nursing</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
                     <Arrow id='forward-arrow' className={`arrow ${currentCard !== 8 && 'visible'}`} onClick={(e) => handleArrowClick(e)} />
                 </div>
             </div>

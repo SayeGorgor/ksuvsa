@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import CarouselArrow from '../assets/carousel_arrow.svg?react';
-import ExitArrow from '../assets/exit_arrow.svg?react';
+import { useEffect, useState } from 'react';
 import { carouselPhotos, emToPx } from '../helpers/helpers';
 import './CultureShowPage.css';
+
+import CarouselArrow from '../assets/carousel_arrow.svg?react';
+import ExitArrow from '../assets/exit_arrow.svg?react';
+
 
 const CultureShowPage = () => {
     //States
