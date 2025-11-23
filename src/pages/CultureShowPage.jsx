@@ -102,10 +102,15 @@ const CultureShowPage = () => {
         carousel.scrollTo({left: emToPx(40)});
     }, []);
 
-    //Lock hero height on mount (fixes hero section bouncing on ios)
+    //Lock hero and section heights on mount (fixes hero and section bouncing on ios)
     useEffect(() => {
-        const cultureShowHero = document.getElementById('cs-page-hero-section');
-        cultureShowHero.style.height = `${window.innerHeight - 80}px`;
+        const hero = document.getElementById('cs-page-hero-section');
+        const cs2025Section = document.getElementById('cs-page-2025-section');
+        const joinUsSection = document.getElementById('join-us-section');
+        hero.style.height = `${window.innerHeight - 80}px`;
+        cs2025Section.style.height = `${window.innerHeight}px`;
+        joinUsSection.style.height = `${window.innerHeight}px`;
+
     }, []);
 
     return(

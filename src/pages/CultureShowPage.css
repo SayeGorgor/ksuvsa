@@ -214,7 +214,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100dvh;
+    height: 100vh;
+    height: 100svh;
     width: 100%;
     background-image: url('/photos/2025_section_background.jpg');
 }
@@ -573,7 +574,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 100dvh;
+    height: 100vh;
+    height: 100svh;
     width: 100%;
     background-color: black;
     color: white;
