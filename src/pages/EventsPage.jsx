@@ -1,7 +1,14 @@
-import React from 'react';
+import { useEffect } from 'react';
 import './EventsPage.css';
 
 const EventsPage = () => {
+    //Use Effect
+    //Lock hero height on mount (fixes hero section bouncing on ios)
+    useEffect(() => {
+        const eventsHero = document.getElementById('events-page-hero-container');
+        eventsHero.style.height = `${window.innerHeight - 80}px`;
+    }, []);
+
     return(
         <div id='events-page-container'>
             <div id='events-page-hero-container'>

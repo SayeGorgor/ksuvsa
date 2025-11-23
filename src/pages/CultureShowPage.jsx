@@ -96,9 +96,16 @@ const CultureShowPage = () => {
     }
 
     //Use Effects
+    //Scroll to beginning of carousel on mount
     useEffect(() => {
         const carousel = document.getElementById('photo-carousel');
         carousel.scrollTo({left: emToPx(40)});
+    }, []);
+
+    //Lock hero height on mount (fixes hero section bouncing on ios)
+    useEffect(() => {
+        const cultureShowHero = document.getElementById('cs-page-hero-section');
+        cultureShowHero.style.height = `${window.innerHeight - 80}px`;
     }, []);
 
     return(

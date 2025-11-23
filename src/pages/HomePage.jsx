@@ -38,6 +38,7 @@ const Home = () => {
     }
 
     //Use Effect
+    //Lock hero height on mount (fixes hero section bouncing on ios)
     useEffect(() => {
         const homeHero = document.getElementById('hero');
         homeHero.style.height = `${window.innerHeight - 80}px`;
