@@ -39,36 +39,27 @@ const LoginField = () => {
     //Use Effect
     //Prevent scrolling when login field is active
     useEffect(() => {
-        const lockScroll = () => {
-            const scrollY = window.scrollY;
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${scrollY}px`;
-            document.body.dataset.scrollY = scrollY;
-            // e.preventDefault();
+        const preventScroll = (e) => {
+            e.preventDefault();
         };
 
-        const unlockScroll = () => {
-            document.body.style.position = '';
-            document.body.style.top = '';
-            window.scrollTo(0, document.body.dataset.scrollY || 0);
-            delete document.body.dataset.scrollY;
-        }
-
-        // const preventKeyScroll = (e) => {
-        //     const keys = ["ArrowUp", "ArrowDown", "PageUp", "PageDown", " ", "Home", "End"];
-        //     if (keys.includes(e.key)) {
-        //         e.preventDefault();
-        //     }
-        // };
+        const preventKeyScroll = (e) => {
+            const keys = ["ArrowUp", "ArrowDown", "PageUp", "PageDown", " ", "Home", "End"];
+            if (keys.includes(e.key)) {
+                e.preventDefault();
+            }
+        };
 
         if(showLoginField) {
-            lockScroll()
-            // window.addEventListener("keydown", preventKeyScroll);
+            window.addEventListener("wheel", preventScroll, { passive: false });
+            window.addEventListener("touchmove", preventScroll, { passive: false });
+            window.addEventListener("keydown", preventKeyScroll);
         }
         
         return () => {
-            unlockScroll();
-            // window.removeEventListener("keydown", preventKeyScroll);
+            window.removeEventListener("wheel", preventScroll);
+            window.removeEventListener("touchmove", preventScroll);
+            window.removeEventListener("keydown", preventKeyScroll);
         };
     }, [showLoginField]);
 
