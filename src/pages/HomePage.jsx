@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './HomePage.css';
 
 import CSScrollBar from '../components/CSScrollBar';
 import Arrow from '../assets/eboard_arrow.svg?react';
 
 const Home = () => {
+    const cardListRef = useRef(null);
     //Use State
     const [currentCard, setCurrentCard] = useState(0);
     
@@ -72,7 +73,7 @@ const Home = () => {
                 <h2>Meet Our Eboard!</h2>
                 <div id='eboard-card-list-container'>
                     <Arrow id='back-arrow' className={`arrow ${currentCard !== 0 && 'visible'}`} onClick={(e) => handleArrowClick(e)} />
-                        <ul id='eboard-card-list'>
+                        <ul id='eboard-card-list' ref={cardListRef}>
                             <li>
                                 <div id='gisel' className='eboard-card' onClick={(e) => handleCardClick(e)}>
                                     <div className='info'>
@@ -184,6 +185,7 @@ const Home = () => {
                         </ul>
                     <Arrow id='forward-arrow' className={`arrow ${currentCard !== 8 && 'visible'}`} onClick={(e) => handleArrowClick(e)} />
                 </div>
+                <CSScrollBar cardListRef={cardListRef} />
             </div>
         </div>
     );

@@ -1,0 +1,22 @@
+#cs-scroll-bar-track {
+    display: none;
+    width: 100%;
+    background-color: black;
+    height: .8rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+#cs-scroll-bar-thumb {
+    height: 100%;
+    /* width: 4rem; */
+    background-color: white;
+    border-radius: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media(max-width: 480px) {
+    #cs-scroll-bar-track {
+        display: flex;
+    }
+}
