@@ -46,7 +46,7 @@ const NavBar = () => {
 
         const handleScroll = () => {
             let currentScroll = Math.max(0, window.scrollY);
-            if(currentScroll < 30) {
+            if(currentScroll < 15) {
                 nav.classList.add('at-top');
             } else {
                 nav.classList.remove('at-top');
@@ -63,16 +63,6 @@ const NavBar = () => {
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
-    // useEffect(() => {
-    //     if(showLogoWindow) {
-    //         const logoWindow = document.getElementById('logo-window');
-    //         const logoLeft = document.getElementById('logo-container').getBoundingClientRect().left;
-    //         console.log('Logo Left: ', logoLeft);
-            
-    //         if(logoWindow) logoWindow.style.left = `${logoLeft}px`;
-    //     }
-    // }, [showLogoWindow]);
 
     return(
         <>
